@@ -1,9 +1,0 @@
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {"Sid": "IamWildcard", "Effect": "Allow", "Action": "iam:*", "Resource": "*"},
-    {"Sid": "S3PartialWildcard", "Effect": "Allow", "Action": ["s3:Get*", "s3:List*"], "Resource": "arn:aws:s3:::my-bucket/*"},
-    {"Sid": "ScopedWithCondition", "Effect": "Allow", "Action": "ec2:*", "Resource": "*",
-     "Condition": {"StringEquals": {"aws:RequestedRegion": "us-east-1"}}}
-  ]
-}
